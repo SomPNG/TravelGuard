@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "TravelGuard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4000" },
+    { "key": "operator_address", "value": "KREWOTVBKJ6PRG64ER2VRE6N4AECY2U7WGHJE3U2MOXR7NXJ6YZQT2XZQ4" },
+    { "key": "trip_id", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/health"
+      }
+    },
+    {
+      "name": "Contract Info",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/contract-info"
+      }
+    },
+    {
+      "name": "Platform Info",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/platform/info"
+      }
+    },
+    {
+      "name": "Platform Boxes",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/platform/boxes"
+      }
+    },
+    {
+      "name": "Get Operator",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/operator/{{operator_address}}"
+      }
+    },
+    {
+      "name": "Get Trip",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/trip/{{trip_id}}/{{operator_address}}"
+      }
+    },
+    {
+      "name": "Refund Estimate",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/trip/{{trip_id}}/{{operator_address}}/refund-estimate"
+      }
+    }
+  ]
+}

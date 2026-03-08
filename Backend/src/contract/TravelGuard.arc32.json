@@ -1,0 +1,132 @@
+{
+  "name": "TravelGuard",
+  "methods": [
+    {
+      "name": "initialize",
+      "args": [],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "registerOperator",
+      "args": [
+        { "type": "uint64", "name": "premiumPercent" },
+        { "type": "uint64", "name": "compensationPercent" },
+        { "type": "pay", "name": "payment" }
+      ],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "topUpDeposit",
+      "args": [{ "type": "pay", "name": "payment" }],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "withdrawDeposit",
+      "args": [{ "type": "uint64", "name": "amount" }],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "bookTrip",
+      "args": [
+        { "type": "uint64", "name": "fare" },
+        { "type": "byte[]", "name": "operatorAddress" },
+        { "type": "pay", "name": "payment" }
+      ],
+      "readonly": false,
+      "returns": { "type": "uint64" }
+    },
+    {
+      "name": "userCancel",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" }
+      ],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "updateTripStatus",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" },
+        { "type": "uint64", "name": "newDelayHours" },
+        { "type": "bool", "name": "isCancelled" }
+      ],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "claimRefund",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" }
+      ],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "completeTrip",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" }
+      ],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "rescueFunds",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" }
+      ],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "withdrawProfit",
+      "args": [{ "type": "uint64", "name": "amount" }],
+      "readonly": false,
+      "returns": { "type": "void" }
+    },
+    {
+      "name": "getTrip",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" }
+      ],
+      "readonly": true,
+      "returns": { "type": "(uint64,uint64,uint64,bool)" }
+    },
+    {
+      "name": "getRefundEstimate",
+      "args": [
+        { "type": "uint64", "name": "tripId" },
+        { "type": "byte[]", "name": "operatorAddress" }
+      ],
+      "readonly": true,
+      "returns": { "type": "uint64" }
+    },
+    {
+      "name": "getOperator",
+      "args": [{ "type": "byte[]", "name": "operatorAddress" }],
+      "readonly": true,
+      "returns": { "type": "(uint64,uint64,uint64,uint64,bool)" }
+    },
+    {
+      "name": "getPlatformBalance",
+      "args": [],
+      "readonly": true,
+      "returns": { "type": "uint64" }
+    },
+    {
+      "name": "getTotalTrips",
+      "args": [],
+      "readonly": true,
+      "returns": { "type": "uint64" }
+    }
+  ]
+}
