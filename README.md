@@ -1,8 +1,10 @@
 
-
 # TravelGuard ✈️🛡️
 
 > Decentralized flight insurance powered by Algorand smart contracts. Automatic refunds when your flight is delayed — no middlemen, no paperwork.
+
+🚀 **Live Demo:** [travel-guard-two.vercel.app](https://travel-guard-two.vercel.app/)  
+*(Frontend is proudly deployed on Vercel, and the API Backend is hosted on Render)*
 
 **TravelGuard** is a dApp (Decentralized Application) built on the Algorand TestNet that connects travelers seeking flight insurance with airline operators managing flight statuses. 
 
