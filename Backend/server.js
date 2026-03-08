@@ -10,7 +10,13 @@ const tripRoutes = require('./src/routes/trip');
 const app = express();
 
 // ─── MIDDLEWARE ─────────────────────────────────────────────────────
-app.use(cors());
+const corsOptions = {
+  origin: process.env.NODE_ENV === "production"
+    ? process.env.CLIENT_URL
+    : "*"
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // ─── API ROUTES ────────────────────────────────────────────────────
