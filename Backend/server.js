@@ -66,13 +66,4 @@ app.use((err, req, res, _next) => {
 app.listen(config.port, () => {
   console.log(`\n🛡️  TravelGuard API running on http://localhost:${config.port}`);
   console.log(`📡 Connected to Algorand TestNet (App ID: ${config.appId})`);
-  console.log(`\nEndpoints:`);
-  console.log(`  GET /api/health`);
-  console.log(`  GET /api/contract-info`);
-  console.log(`  GET /api/platform/info`);
-  console.log(`  GET /api/platform/boxes`);
-  console.log(`  GET /api/operator/:address`);
-  console.log(`  GET /api/trip/:tripId/:operatorAddress`);
-  console.log(`  GET /api/trip/:tripId/:operatorAddress/refund-estimate`);
-  console.log();
 });
